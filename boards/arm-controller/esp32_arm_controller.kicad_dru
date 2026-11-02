@@ -1,0 +1,7 @@
+(version 1)
+(rule header_blocks
+    (condition "A.Reference == 'J*' && B.Reference == 'J*'")
+    (constraint courtyard_clearance (min -5mm)))
+(rule corner_hole
+    (condition "A.Reference == 'H4' && B.Reference == 'J1'")
+    (constraint courtyard_clearance (min -5mm)))
