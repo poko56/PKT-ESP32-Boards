@@ -1,13 +1,54 @@
-# PKT ESP32-C3 Mini
+<p align="center">
+  <img src="docs/pcb_top.png" width="300" alt="PKT ESP32-C3 Mini ด้านบน">
+  <img src="docs/pcb_bottom.png" width="300" alt="PKT ESP32-C3 Mini ด้านหลังพร้อมโลโก้">
+</p>
 
-บอร์ด ESP32-C3 ขนาด 20 × 34 มม. เน้นเล็กและไฟสะอาด สั่ง PCBA ผ่าน JLCPCB ได้
+<h1 align="center">PKT ESP32-C3 Mini</h1>
 
-| ด้านบน | ด้านหลัง |
+<p align="center">บอร์ด ESP32-C3 ขนาด 20 × 34 มม. เน้นเล็ก ไฟสะอาด และสั่ง PCBA ผ่าน JLCPCB ได้</p>
+
+## บอร์ดนี้คืออะไร
+
+PKT ESP32-C3 Mini คือบอร์ดไร้สายขนาดจิ๋วที่มี USB-C ในตัว เสียบแล้วเขียนโปรแกรมได้เลย
+ออกแบบมาสำหรับงานที่พื้นที่น้อยและต้องการการสื่อสารไร้สาย เช่น ESP-NOW, Wi-Fi และ Bluetooth LE
+
+## เหมาะกับงานแบบไหน
+
+- โหนดเซนเซอร์ไร้สาย
+- อุปกรณ์สวมใส่หรืออุปกรณ์ในกล่องขนาดเล็ก
+- รีโมตและตัวรับส่งข้อมูลระหว่างอุปกรณ์
+
+## จุดเด่น
+
+| หัวข้อ | รายละเอียด |
 |---|---|
-| <img src="docs/pcb_top.png" width="280"> | <img src="docs/pcb_bottom.png" width="280"> |
+| USB | USB ในตัวชิป ไม่ต้องมีชิป USB-UART |
+| ไฟเลี้ยง | LDO AP2112K-3.3 ไม่มีวงจรสวิตชิงบนบอร์ด |
+| กรองไฟ | ferrite ที่ไฟเข้า และ C กรองไฟหลายค่า |
+| ป้องกัน | USBLC6 กัน ESD และ B5819W กันไฟย้อน |
+| เสาอากาศ | ไม่มีทองแดงในเขตเสาอากาศ |
+| การประกอบ | อุปกรณ์ SMD อยู่ด้านเดียว |
 
-ไฟล์สั่งผลิตอยู่ใน `fab/` เริ่มที่ [HOW_TO_ORDER.txt](fab/HOW_TO_ORDER.txt) ยังไม่ได้ทดสอบกับบอร์ดจริง
+## สเปก
 
-[คำอธิบายเต็ม](docs/about.txt) · [Schematic PDF](docs/schematic.pdf)
+| รายการ | ค่า |
+|---|---|
+| ขนาด | 20 × 34 มม. PCB 2 ชั้น |
+| โมดูล | ESP32-C3-MINI-1 |
+| ไฟเข้า | USB-C หรือขา 5V |
+| ขา I/O | header 7 ขา 2 แถว ห่างกัน 15.24 มม. |
+| GPIO | 0-7, 10, TX, RX |
+| ปุ่มและไฟ | RST, BOOT, LED ที่ IO8 |
 
-![Schematic](docs/schematic.png)
+## วงจร
+
+![วงจร PKT ESP32-C3 Mini](docs/schematic.png)
+
+ดูแบบซูมได้ที่ [schematic.pdf](docs/schematic.pdf)
+
+## สั่งผลิต
+
+ไฟล์อยู่ใน [`fab/`](fab) และดูขั้นตอนได้ที่ [HOW_TO_ORDER.txt](fab/HOW_TO_ORDER.txt)
+
+> สถานะ: DRC ไม่มี error และ ERC ผ่าน แต่ยังไม่ได้ทดสอบกับบอร์ดจริง
+> รหัสอะไหล่บางตัวต้องยืนยันในหน้าจับคู่ของ JLCPCB ก่อนสั่ง
