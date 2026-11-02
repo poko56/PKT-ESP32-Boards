@@ -1,0 +1,11 @@
+# KiCad local state
+*.kicad_prl
+*-backups/
+fp-info-cache
+*.lck
+*.order
+_autosave-*
+
+# Python / macOS
+__pycache__/
+.DS_Store
