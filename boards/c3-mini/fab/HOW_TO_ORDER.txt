@@ -1,0 +1,13 @@
+สั่ง PCBA ที่ JLCPCB
+1. อัปโหลด esp32c3_gerber.zip  เลือก 2 layers, 1.6 mm, 1 oz
+2. เลือก PCB Assembly ด้านบน (Top side)
+3. BOM: JLC_BOM.csv   CPL: JLC_CPL.csv
+4. คอลัมน์ Check:
+   verified = รหัสตรงกับแหล่งข้อมูลที่เช็กแล้ว
+   confirm in JLC = เช็กชื่อและสเปกในหน้าจับคู่อะไหล่ก่อนยืนยัน
+   pick part in JLC = ยังไม่ระบุรหัส ต้องเลือกอะไหล่เอง (LED, ferrite, ปุ่ม 4.2x2.8 มม.)
+5. ดูพรีวิวการหมุนอุปกรณ์ โดยเฉพาะ U1, U2, U3, J1, D1, D2 และแก้ก่อนสั่ง
+6. J2 และ J3 คือ header ที่บัดกรีเอง ไม่อยู่ใน BOM
+
+เปิดใน EasyEDA Pro: File > Import > KiCad แล้วเลือก esp32c3_board.kicad_pro
+ตรวจ footprint ของ U1 หลังนำเข้า เพราะใช้ land pattern ของ C6-MINI-1 ที่ขนาดตรงกับ C3-MINI-1
