@@ -18,11 +18,50 @@
 
 ## บอร์ดทั้งหมด
 
-| | บอร์ด | ขนาด | จุดเด่น | สถานะ | Branch |
-|---|---|---|---|---|---|
-| <img src="boards/c3-mini/docs/pcb_top.png" width="90"> | **[PKT ESP32-C3 Mini](boards/c3-mini)** | 20 × 34 มม. | จิ๋ว ไฟสะอาด USB-C ในตัว โลโก้ PKT | ไฟล์พร้อมสั่ง PCBA | `board/c3-mini` |
-| <img src="boards/esp32-devboard/docs/pcb_top.png" width="90"> | **[ESP32 Dev Board](boards/esp32-devboard)** | 29 × 54.6 มม. | เสียบ breadboard ได้ CH340C auto-reset | มี Gerber | `board/esp32-devboard` |
-| <img src="boards/arm-controller/docs/pcb_placement_top.png" width="90"> | **[Robot Arm Controller](boards/arm-controller)** | 80 × 64 มม. | servo 5 ช่อง E-stop วัดกระแส แยกไฟ logic | วงจรเสร็จ เดินลายยังไม่เสร็จ | `board/arm-controller` |
+### PKT ESP32-C3 Mini
+
+<img align="right" src="boards/c3-mini/docs/pcb_top.png" width="210" alt="PKT ESP32-C3 Mini">
+
+บอร์ดไร้สายขนาดจิ๋ว 20 × 34 มม. เหมาะกับโหนด ESP-NOW, เซนเซอร์ไร้สาย และอุปกรณ์ในกล่องเล็ก
+มี USB-C ในตัว ไฟเลี้ยงเป็น LDO ล้วน และมีโลโก้ PKT ด้านหลัง
+
+- โมดูล ESP32-C3-MINI-1
+- อุปกรณ์ SMD ด้านเดียว สั่ง PCBA ผ่าน JLCPCB ได้
+- **สถานะ:** ไฟล์พร้อมสั่ง
+
+[ดูรายละเอียดและวงจร](boards/c3-mini)
+
+<br clear="right">
+
+### ESP32 Dev Board
+
+<img align="right" src="boards/esp32-devboard/docs/pcb_top.png" width="170" alt="ESP32 Dev Board">
+
+บอร์ดพัฒนาขนาด 29 × 54.6 มม. สำหรับเรียนรู้และทำต้นแบบบน breadboard
+เสียบ USB-C แล้วอัปโหลดโค้ดได้เลย
+
+- โมดูล ESP32-WROOM-32E
+- CH340C พร้อมวงจร auto-reset
+- **สถานะ:** มี Gerber
+
+[ดูรายละเอียดและวงจร](boards/esp32-devboard)
+
+<br clear="right">
+
+### Robot Arm Controller
+
+<img align="right" src="boards/arm-controller/docs/pcb_placement_top.png" width="300" alt="Robot Arm Controller">
+
+บอร์ดควบคุมแขนกล 5 แกน ขนาด 80 × 64 มม. สำหรับ SG90/MG90S ใช้ adapter 12V
+แยกไฟ servo กับ logic มี E-stop และวัดกระแสได้
+
+- PCA9685 + 74AHCT541 + TPS54560B + INA219
+- พอร์ต DIO, ADC, I2C และ UART
+- **สถานะ:** วงจรเสร็จ เดินลายยังไม่เสร็จ ยังสั่งผลิตไม่ได้
+
+[ดูรายละเอียดและวงจร](boards/arm-controller)
+
+<br clear="right">
 
 > ยังไม่มีบอร์ดใดผ่านการทดสอบกับของจริง ตรวจด้วย ERC และ DRC ของ KiCad แล้วเท่านั้น
 
