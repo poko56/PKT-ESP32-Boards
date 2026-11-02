@@ -1,0 +1,26 @@
+** Drc report for esp32_devboard.kicad_pcb **
+** Created on 2026-11-02T22:29:02 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 2 DRC violations **
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(128.0000 mm, 154.6000 mm): Segment on Edge.Cuts
+    @(109.8000 mm, 153.4000 mm): Segment of J1 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(128.0000 mm, 154.6000 mm): Segment on Edge.Cuts
+    @(119.2000 mm, 153.4000 mm): Segment of J1 on F.Silkscreen
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **
